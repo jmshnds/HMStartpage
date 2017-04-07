@@ -7,7 +7,7 @@
 }
 
 body {
-	background: url("Images/bg3.png") no-repeat center center fixed;
+	background: url("Images/background.png") no-repeat center center fixed;
 	background-color: #000000;
 	background-size: cover;
 }

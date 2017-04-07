@@ -1,13 +1,14 @@
-# Frontpage
-A customized frontpage. 
+# HMStartpage
+A customized frontpage influenced by the game Hotline Miami. 
 
 Date and time at the top.
-Categories with links to commonly visited websites. 
+Links to commonly visited websites. 
 Searchbar that uses duckduckgo.
-Background cycles through 12 images, changing every two hours. 
 
-Images from: https://imgur.com/a/xTUEf
+Time font by Chris Hansen.
+http://www.dafont.com/shoguns-clan.font
 
-Inspired by: https://github.com/NateMS/startpage
+Background image by primskorv
+http://primskorv.deviantart.com/art/boogie-oogie-oogie-644340066
 
 ![screenshot](Images/screenshot.png)

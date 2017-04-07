@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>PRESS R TO RESTART</title>
+	
+	<link rel="stylesheet" type="text/css" href="site.css">
+	
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Damion|Press+Start+2P" rel="stylesheet"> 
+</head>
+<body>
+	<div class="content">
+	
+		<!-- DateTime -->
+		<div id="DateTime" class="centered contentItem">
+			<div id="Time">
+				<time id="currentTime1"></time>
+				<time id="currentTime2"></time>
+				<time id="currentTime3"></time>
+			</div>
+			<div id="Date">
+				<span id="currentDate1"></span>
+				<span id="currentDate2"></span>
+			</div>
+		</div> <!-- end DateTime -->
+		
+		<!-- Links -->
+		<div id="Links" class="centered contentItem">
+			
+			<a href="#">Link A</a>
+			<a href="#">Link B</a>
+			<a href="#">Link C</a>
+			<a href="#">Link D</a>
+			
+		</div> <!-- end Links -->
+		
+		<!-- Search -->
+		<div id="Search" class="centered contentItem">
+		    <form action="https://www.duckduckgo.com/" method="get">
+				<input type="search" autocomplete="off" placeholder="search..." name="q" class="searchbox" autofocus>
+				<input type="submit" value="search" style="display:none; ">
+			</form>
+		</div> <!-- end Search -->
+		
+	</div> <!-- end content -->
+	
+	<script>
+        function setTime() {
+			var dateTime = new Date();
+			
+			// Time
+			var theTime = ""; // variable to update the displayed time
+			var hours = dateTime.getHours();
+			var mins = dateTime.getMinutes();
+			// Set AM or PM and hours
+			var ampm = "AM";
+			if(hours > 12) {
+				hours -= 12;
+				ampm = "PM";
+			}
+			else if (hours == 0) {
+				// To change 0:00 AM to 12:00 AM
+				hours = 12;
+			}
+			theTime += hours + " . ";
+			// Set minutes
+			if(mins < 10) {
+				theTime += "0" + mins;
+			}
+			else {
+				theTime += mins;
+			}
+			theTime += " " + ampm;
+			
+			// Date
+			var theDate = ""; // variable to update the displayed date
+			// Set day of the week
+			switch(dateTime.getDay()) {
+				case 0:
+					theDate += "Sunday";
+					break;
+				case 1:
+					theDate += "Monday";
+					break;
+				case 2:
+					theDate += "Tueday";
+					break;
+				case 3:
+					theDate += "Wednesday";
+					break;
+				case 4:
+					theDate += "Thursday";
+					break;
+				case 5:
+					theDate += "Friday";
+					break;
+				case 6:
+					theDate += "Saturday";
+					break;
+				default:
+					theDate += "day";
+			}
+			theDate += ", ";
+			// Set month
+			switch(dateTime.getMonth()) {
+				case 0:
+					theDate += "January";
+					break;
+				case 1:
+					theDate += "February";
+					break;
+				case 2:
+					theDate += "March";
+					break;
+				case 3:
+					theDate += "April";
+					break;
+				case 4:
+					theDate += "May";
+					break;
+				case 5:
+					theDate += "June";
+					break;
+				case 6:
+					theDate += "July";
+					break;
+				case 7:
+					theDate += "August";
+					break;
+				case 8:
+					theDate += "September";
+					break;
+				case 9:
+					theDate += "October";
+					break;
+				case 10:
+					theDate += "November";
+					break;
+				case 11:
+					theDate += "December";
+					break;
+				default:
+					theDate += "Invalid Month";
+			}
+			// Set day of the month
+			var dayOfTheMonth = dateTime.getDate();
+			theDate += " " + dayOfTheMonth;
+			switch(dayOfTheMonth) {
+				case 1: case 21: case 31:
+					theDate += "st";
+					break;
+				case 2: case 22:
+					theDate += "nd";
+					break;
+				case 3: case 23:
+					theDate += "rd";
+					break;
+				default:
+					theDate += "th";
+			}
+			
+			// Update html elements
+            document.getElementById("currentTime1").innerHTML = theTime;
+			document.getElementById("currentTime2").innerHTML = theTime;
+			document.getElementById("currentTime3").innerHTML = theTime;
+			document.getElementById("currentDate1").innerHTML = theDate;
+			document.getElementById("currentDate2").innerHTML = theDate;
+        }
+		setTime(); // initial call to setTime
+        setInterval(setTime, 5000); // setTime every 5 seconds	
+	</script>	
+</body>
+</html>

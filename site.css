@@ -1,0 +1,143 @@
+
+@font-face {
+	font-family: 'Hotline';
+	src: 
+		url('Shoguns_Clan.ttf')
+		format('truetype');  
+}
+
+body {
+	background: url("Images/bg3.png") no-repeat center center fixed;
+	background-color: #000000;
+	background-size: cover;
+}
+
+.centered {
+	text-align: center;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.contentItem {
+	background: rgba(0, 0, 0, 0.7);
+	border: 6px double #F1F0F0;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px #011419;
+	display: block;
+}
+
+/* Time */
+#DateTime {
+	margin: 50px auto 50px auto;
+	min-width: 500px;
+	padding: 10px 0px 10px 0px;
+	width: 50%;
+}
+
+#Time {
+	font-family: 'Hotline', sans-serif;
+	margin: 0 auto;
+	position: relative;
+}
+
+#Time, #currentTime1, #currentTime2, #currentTime3, #Date, #currentDate1, #currentDate2 {
+	display: block;
+	height: 90px;
+	width: 500px;
+}
+
+#currentTime1, #currentTime2, #currentTime3 {
+	position: absolute;
+	letter-spacing: 1.20px;
+}
+
+#currentTime1 {
+	color: #3fff75;
+	font-size: 6.7em;
+	font-weight: 400;
+	z-index: 3;
+}
+
+#currentTime2 {
+	color: #445EFA;
+	font-size: 6.4em;
+	font-weight: 600;
+	z-index: 2;
+}
+
+#currentTime3 {
+	color: #ae1ba3;
+	font-size: 6.2em;
+	font-weight: 600;
+	z-index: 1;
+}
+
+#Date {
+	font-family: 'Damion', sans-serif;
+	margin: 0 auto;
+	position: relative;
+}
+
+#currentDate1, #currentDate2 {
+	position: absolute;
+}
+
+#currentDate1 {
+	color: #c16bff;
+	font-size: 3.1em;
+	z-index: 2;
+}
+
+#currentDate2 {
+	color: #7346d2;
+	font-size: 3.0em;
+	font-weight: 700;
+	z-index: 1;
+}
+/* end Time */
+
+/* Links */
+#Links {
+	font-family: 'Press Start 2P', monospace;
+	margin: 0 auto 50px auto;
+	padding: 5px 10px 5px 10px;
+	width: 30%;
+}
+
+#Links a {
+	color: #77CEDF;
+	display: block;
+	font-size: 1.5em;
+	font-weight: 400;
+	margin: 5px auto 5px auto;
+    text-decoration: none;
+}
+
+#Links a:hover {
+	color: #8fd6e4;
+	letter-spacing: 1.5px;
+}
+/* end Links */
+
+#Search {
+	margin: 0 auto;
+	width: 50%;
+}
+
+/* Search */
+.searchbox {
+	background: inherit;
+	color: #FFF9FF;
+    font-family: 'Press Start 2P', monospace;
+	font-size: 0.9em;
+	padding: 18px 20px 18px 20px;
+    transition: 1.2s;
+	width: 100%;
+}
+
+.searchbox:focus {
+    background: rgba(0, 0, 0, 0.9);
+}
+/* end Search */
